@@ -15,21 +15,12 @@ namespace Chapter_4_Studio
             Items = item;
         }
         public List<MenuItem> AddItem(MenuItem item)
-        {
-            if (!Items.Contains(item))
-            {
-                Items.Add(item);
-                LastUpdated = DateTime.Now;
-            }
-            else
-            {
-                Console.WriteLine("This Item Already Exist");
-            }
-
-
-            return Items;
+        {        
+            Items.Add(item);
+            LastUpdated = DateTime.Now;
+             return Items;
         }
-
+              
         public List<MenuItem> RemoveItem(MenuItem item)
         {
             Items.Remove(item);

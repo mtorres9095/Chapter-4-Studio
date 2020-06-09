@@ -10,7 +10,6 @@ namespace Chapter_4_Studio
         public string Category { get; set; }
         public bool IsNew { get; set; }
 
-
         public MenuItem(double price, string description, string category, bool isNew)
         {
             Price = price;
@@ -20,7 +19,7 @@ namespace Chapter_4_Studio
         }
         public void Print()
         {
-            Console.WriteLine(Category + " : " + Description + " : " + Price + "$");
+            Console.WriteLine(Category + " : " + Description + " :  $" + Price);
         }
         public override bool Equals(object obj)
         {
