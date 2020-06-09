@@ -3,7 +3,7 @@
 
 namespace Chapter_4_Studio
 {
-   public class MenuItem
+    public class MenuItem
     {
         public double Price { get; set; }
         public string Description { get; set; }
@@ -18,6 +18,30 @@ namespace Chapter_4_Studio
             Category = category;
             IsNew = isNew;
         }
+        public void Print()
+        {
+            Console.WriteLine(Category + " : " + Description + " : " + Price + "$");
+        }
+        public override bool Equals(object obj)
+        {
+            if (this == obj)
+            {
+                return true;
+            }
 
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (this.GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            MenuItem itemObj = obj as MenuItem;
+            return Description == itemObj.Description;
+
+        }
     }
 }
